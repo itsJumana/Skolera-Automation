@@ -13,4 +13,4 @@ Deactivate Students
     [Tags]             Bulk Action
     Login and Navigate to Student List
     Deactivate Multiple Students    3
-    Sleep   7s
+    Sleep   3s
