@@ -13,7 +13,8 @@ ${Check_box_common_xpath}   //*[@id="table-container"]/div/div[1]/div[2]/div/tab
 ${Action_Menu_Xpath}    //*[@id="table-container"]/div/div[1]/div[2]/div/table/thead/tr/th[10]/span
 ${Deactivate_Option_Xpath}      //*[@id="table-container"]/div/div[1]/div[2]/div/table/thead/tr/th[10]/span/div/div[4]
 ${Post_Common_Xpath}    td[1]/skolera-multi-checkbox
-${Deactivate_Selected_Button_Xpath}
+${Deactivate_Selected_Button_Xpath}  //*[@id="mat-dialog-0"]/skolera-confirmation/div/div/div/div[2]/div/button[2]
+${Deactivation_Message_Text}    Student Account Has Been Deactivated Successfully
 ${USERNAME}    skolera
 ${PASSWORD}    asdasd123A!
 
@@ -39,12 +40,8 @@ Deactivate Multiple Students
     Click Element   xpath:${Action_Menu_Xpath}
     Wait Until Element Is Visible   xpath:${Deactivate_Option_Xpath}  timeout=30s
     Click Element   xpath:${Deactivate_Option_Xpath}
-    Wait Until Element Is Visible   text:${Deactivate_Option_Xpath}  timeout=30s
-    Click Element   xpath:${Deactivate_Option_Xpath}
 
+    Wait Until Element Is Visible   xpath:${Deactivate_Selected_Button_Xpath}  timeout=30s
+    Click Element   xpath:${Deactivate_Selected_Button_Xpath}
 
-#Check Student Status
-#    [Arguments]    ${studentXPath}
-#    ${statusElement}    Run Keyword And Return Status    Element Should Exist    xpath:${statusIndicatorXPath}
-#    Run Keyword If    '${statusElement}' is True    Log    Student is active
-#    ...    ELSE    Log    Student is inactive
+    Wait Until Page Contains    ${Deactivation_Message_Text}  timeout=30s
