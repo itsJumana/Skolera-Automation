@@ -1,0 +1,7 @@
+username,password,expected_result
+skolera,wrongpassword123!,Invalid login credentials. Please try again.
+wrongUsername,asdasd123A!,Invalid login credentials. Please try again.
+wrongUsername,wrongpassword123!,Invalid login credentials. Please try again.
+skolera,,Password is required.
+,asdasd123A!,Username is required.
+skolera,asdasd123A!,Sync

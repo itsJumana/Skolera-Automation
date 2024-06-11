@@ -13,3 +13,6 @@ Begin Web Test
 End Web Test
     Close Browser
 
+Refresh Browser
+    [Documentation]    Refresh the browser to reset the state for the next test
+    Reload Page
