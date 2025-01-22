@@ -44,4 +44,4 @@ Empty Username Field Login
 *** Keywords ***
 Log In With Credentials
     [Arguments]    ${username}    ${password}    ${expected_result}
-    Log In To Skolera    ${username}    ${password}    ${expected_result}
+    Log In To Skolera    ${username}    ${password}    ${expected_result_edited}
