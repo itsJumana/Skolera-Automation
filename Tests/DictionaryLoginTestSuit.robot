@@ -41,4 +41,4 @@ Empty Password Field Login
 Empty Username Field Login
     [Documentation]    Test case to verify error message for empty username field
     [Tags]    Login
-    Log In To Skolera    ${EMPTY_STRING}    ${CREDENTIALS['password']}    ${EMPTY_USERNAME_ERROR_TEXT_edited}
+    Log In To Skolera    ${EMPTY_STRING}    ${CREDENTIALS['password']}    ${EMPTY_USERNAME_ERROR_TEXT}
